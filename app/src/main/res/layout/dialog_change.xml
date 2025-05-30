@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="250dp"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    >
+    <EditText
+
+        android:inputType="number"
+        android:id="@+id/idEditTxt_MoneyUpdate"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+
+        android:background="@drawable/edit_text_no_underline"
+        />
+    <EditText
+
+
+        android:id="@+id/idEditTxt_NoteUpdate"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+
+        android:background="@drawable/edit_text_no_underline"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal">
+        <ImageButton
+            android:id="@+id/idImgButtonUpdateOK"
+            android:src="@drawable/pencil"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+
+            android:scaleType="centerInside"
+            android:layout_weight="1"
+            />
+        <ImageButton
+            android:id="@+id/idImgButtonUpdateNo"
+            android:src="@drawable/delete"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+
+            android:scaleType="centerInside"
+            android:layout_weight="1"
+            />
+    </LinearLayout>
+
+</LinearLayout>

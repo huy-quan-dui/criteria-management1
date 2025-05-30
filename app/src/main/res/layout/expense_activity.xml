@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <TextView
+        android:id="@+id/idTextViewTotalMoney"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+
+        android:gravity="center"
+        android:layout_weight="1"
+        android:textSize="30sp"
+        android:fontFamily="sans-serif-black"
+        android:background="@color/green"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="6"
+        android:orientation="vertical"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1.5"
+            android:orientation="horizontal"
+
+            >
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:background="@drawable/bordered_rectangle"
+                >
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:text="Ngày"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:background="@drawable/bordered_rectangle"
+                    />
+                <EditText
+
+                    android:inputType="number"
+                    android:id="@+id/idEditTxt_day"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:gravity="center"
+
+                    android:background="@drawable/edit_text_no_underline"
+                    />
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:background="@drawable/bordered_rectangle"
+
+                >
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:text="Tháng"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:background="@drawable/bordered_rectangle"
+                    />
+                <EditText
+
+                    android:inputType="number"
+                    android:id="@+id/idEditTxt_month"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:gravity="center"
+
+                    android:background="@drawable/edit_text_no_underline"
+                    />
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:orientation="vertical"
+                android:background="@drawable/bordered_rectangle"
+                >
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:text="Năm"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:background="@drawable/bordered_rectangle"
+                    />
+                <EditText
+
+                    android:inputType="number"
+
+                    android:id="@+id/idEditTxt_year"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:gravity="center"
+
+                    android:background="@drawable/edit_text_no_underline"
+                    />
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+        <!--        mục layout nhập-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="7"
+            android:orientation="vertical"
+            >
+            <ListView
+                android:id="@+id/idListViewChiTieu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="20dp"
+                android:background="@color/gray"
+                />
+
+        </LinearLayout>
+
+    </LinearLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <TextView
+            android:id="@+id/upper"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+
+            app:layout_constraintVertical_weight="1"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/down"
+            app:layout_constraintVertical_chainStyle="packed"
+            />
+
+        <TextView
+            android:id="@+id/down"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+
+            app:layout_constraintVertical_weight="1"
+            android:background="@color/down"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/upper"/>
+        <ImageButton
+            android:id="@+id/imgbtn_newReceipt"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:scaleType="centerInside"
+
+            android:background="@drawable/round_btn"
+            android:src="@mipmap/plus"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+        <ImageButton
+            android:id="@+id/imgbtn_Income"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:scaleType="centerCrop"
+
+            android:background="@drawable/curved_edge_rectangle"
+            android:src="@drawable/income"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/imgbtn_newReceipt"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+        <ImageButton
+            android:id="@+id/imgbtn_Exit"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:scaleType="centerInside"
+
+            android:background="@drawable/curved_edge_rectangle"
+            android:src="@drawable/exit"
+
+            app:layout_constraintStart_toEndOf="@id/imgbtn_newReceipt"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>
